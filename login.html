@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academictender - login or signup</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div class="container" id="container">
+
+    <div class="left" id="left">
+        <h1>Academic </h1>
+        <h2>Tender</h2>
+         <p class="upper">Regester to grow and</p> 
+        <p class="lower">enhance your knowledge</p>
+    </div>
+
+
+    <div class="right" id="right">
+        <form action="">
+            <h1>Login</h1>
+            
+            <div class="input-field" id="input-field">
+                <input type="text" placeholder="Username" required>
+            </div>
+            
+            <div class="input-field" id="sec-input-field">
+                <input type="password" placeholder="Password" required id="password">
+                <img src="image/eye-close.png" id="closeicon">
+            </div>
+
+            <button type="submit" class="login">Login</button>
+            
+            <div class="forget" id="forget">
+                <a href="#">Forget password?</a>
+            </div>
+                    
+            <div class="new_register" id="new-register">
+                <button type="menu">Create new account</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    let closeicon = document.getElementById("closeicon");
+    let password = document.getElementById("password");
+
+    closeicon.onclick = function(){
+        if(password.type=="password"){
+            password.type="text";
+            closeicon.src = "image/eye-open.png";
+        }
+        else{
+            password.type="password";
+            closeicon.src = "image/eye-close.png";
+        }
+    }
+</script>
+
+</body>
+</html>
